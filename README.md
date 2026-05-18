@@ -11,10 +11,9 @@ déplacements inutiles.
 | Membre | Rôle |
 |--------|------|
 | Étudiant 1 (Sandra) | Chef de projet & GitHub |
-| Étudiant 2 (yohan) |Thème enfant & Design |
-| Étudiant 3 (rayol) |Fonctionnel & Contenu |
-| Étudiant 4 (MasterZ)|SEO & Sécurité |
-
+| Étudiant 2 (Yohan) | Thème enfant & Design |
+| Étudiant 3 (Rayol) | Fonctionnel & Contenu |
+| Étudiant 4 (MasterZ) | SEO & Sécurité |
 ---
 
 ## 🛠️ Outils utilisés
