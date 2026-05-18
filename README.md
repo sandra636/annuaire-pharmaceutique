@@ -7,14 +7,12 @@ déplacements inutiles.
 ---
 
 ## 👥 Groupe 7 — Laboratoire 2
-
 | Membre | Rôle |
 |--------|------|
 | Étudiant 1 (Sandra) | Chef de projet & GitHub |
 | Étudiant 2 (Yohan) | Thème enfant & Design |
 | Étudiant 3 (Rayol) | Fonctionnel & Contenu |
 | Étudiant 4 (MasterZ) | SEO & Sécurité |
----
 
 ## 🛠️ Outils utilisés
 
