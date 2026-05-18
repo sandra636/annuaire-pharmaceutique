@@ -5,8 +5,10 @@ dans la ville de douala. Il permet un accès facile aux médicaments et évite l
 déplacements inutiles.
 
 ---
+---
 
 ## 👥 Groupe 7 — Laboratoire 2
+
 | Membre | Rôle |
 |--------|------|
 | Étudiant 1 (Sandra) | Chef de projet & GitHub |
