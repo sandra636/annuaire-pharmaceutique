@@ -1,0 +1,374 @@
+/*
+Theme Name:   Annuaire Pharma Enfant
+Theme URI:    https://github.com/groupe7/annuaire-pharma
+Description:  Thème enfant pour l'Annuaire Pharmaceutique Régional — Groupe 7
+Author:       Groupe 7
+Author URI:   https://github.com/groupe7
+Template:     twentytwentyfour
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         pharmacie, annuaire, sante, enfant
+Text Domain:  annuaire-pharma
+*/
+
+/* ============================================================
+   VARIABLES GLOBALES
+   ============================================================ */
+:root {
+    --couleur-primaire:     #0F6E56;   /* vert foncé — santé */
+    --couleur-secondaire:   #1D9E75;   /* vert moyen */
+    --couleur-accent:       #E1F5EE;   /* vert très clair */
+    --couleur-texte:        #1a1a1a;
+    --couleur-texte-doux:   #555555;
+    --couleur-fond:         #f8fbf9;
+    --couleur-blanc:        #ffffff;
+    --couleur-bordure:      #d0e8df;
+    --police-titre:         'Nunito', sans-serif;
+    --police-corps:         'Open Sans', sans-serif;
+    --rayon-bouton:         8px;
+    --ombre:                0 2px 12px rgba(15, 110, 86, 0.10);
+}
+
+/* ============================================================
+   TYPOGRAPHIE DE BASE
+   ============================================================ */
+body {
+    font-family: var(--police-corps);
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--police-titre);
+    font-weight: 700;
+    color: var(--couleur-primaire);
+    line-height: 1.3;
+}
+
+a {
+    color: var(--couleur-primaire);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--couleur-secondaire);
+    text-decoration: underline;
+}
+
+/* ============================================================
+   EN-TÊTE (HEADER)
+   ============================================================ */
+.site-header {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--ombre);
+}
+
+.site-header .site-branding {
+    padding: 1rem 2rem;
+}
+
+.site-title a {
+    color: var(--couleur-blanc) !important;
+    font-family: var(--police-titre);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.site-description {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ============================================================
+   NAVIGATION PRINCIPALE
+   ============================================================ */
+.main-navigation {
+    background-color: var(--couleur-secondaire);
+}
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0 2rem;
+    gap: 0;
+}
+
+.main-navigation ul li a {
+    display: block;
+    padding: 0.85rem 1.2rem;
+    color: var(--couleur-blanc);
+    font-family: var(--police-titre);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li.current-menu-item > a {
+    background-color: var(--couleur-primaire);
+    text-decoration: none;
+    color: var(--couleur-blanc);
+}
+
+/* ============================================================
+   SECTION HÉROS (ACCUEIL)
+   ============================================================ */
+.section-hero {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: var(--couleur-blanc);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.section-hero h1 {
+    color: var(--couleur-blanc);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-hero p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   BOUTONS
+   ============================================================ */
+.btn,
+.wp-block-button__link,
+button[type="submit"] {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--rayon-bouton);
+    font-family: var(--police-titre);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primaire {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    border-color: var(--couleur-primaire);
+}
+
+.btn-primaire:hover {
+    background-color: transparent;
+    color: var(--couleur-primaire);
+    text-decoration: none;
+}
+
+.btn-blanc {
+    background-color: var(--couleur-blanc);
+    color: var(--couleur-primaire);
+    border-color: var(--couleur-blanc);
+}
+
+.btn-blanc:hover {
+    background-color: transparent;
+    color: var(--couleur-blanc);
+    text-decoration: none;
+}
+
+/* ============================================================
+   ZONE DE CONTENU PRINCIPALE
+   ============================================================ */
+.site-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ============================================================
+   CARTES PHARMACIE (pour la page Annuaire)
+   ============================================================ */
+.carte-pharmacie {
+    background: var(--couleur-blanc);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--ombre);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte-pharmacie:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 24px rgba(15, 110, 86, 0.15);
+}
+
+.carte-pharmacie h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.carte-pharmacie .adresse {
+    color: var(--couleur-texte-doux);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.badge-ouvert {
+    display: inline-block;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-primaire);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    border: 1px solid var(--couleur-bordure);
+}
+
+/* ============================================================
+   GRILLE D'ANNUAIRE
+   ============================================================ */
+.grille-pharmacies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* ============================================================
+   SECTION DON (zone GiveWP — Étudiant 3)
+   ============================================================ */
+.section-don {
+    background: var(--couleur-accent);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section-don h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+   BLOG — ARTICLES
+   ============================================================ */
+.carte-article {
+    background: var(--couleur-blanc);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--ombre);
+    transition: transform 0.2s ease;
+}
+
+.carte-article:hover {
+    transform: translateY(-3px);
+}
+
+.carte-article .meta-article {
+    font-size: 0.82rem;
+    color: var(--couleur-texte-doux);
+    margin-bottom: 0.5rem;
+}
+
+.carte-article h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+}
+
+.grille-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* ============================================================
+   FORMULAIRE DE CONTACT
+   ============================================================ */
+.formulaire-contact input,
+.formulaire-contact textarea,
+.formulaire-contact select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon-bouton);
+    font-family: var(--police-corps);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s ease;
+    background: var(--couleur-blanc);
+    color: var(--couleur-texte);
+}
+
+.formulaire-contact input:focus,
+.formulaire-contact textarea:focus {
+    border-color: var(--couleur-secondaire);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.15);
+}
+
+/* ============================================================
+   PIED DE PAGE (FOOTER)
+   ============================================================ */
+.site-footer {
+    background-color: var(--couleur-primaire);
+    color: rgba(255,255,255,0.85);
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: rgba(255,255,255,0.85);
+}
+
+.site-footer a:hover {
+    color: var(--couleur-blanc);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+    .section-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .grille-pharmacies,
+    .grille-articles {
+        grid-template-columns: 1fr;
+    }
+
+    .site-main {
+        padding: 2rem 1rem;
+    }
+
+    .section-don {
+        padding: 1.5rem;
+    }
+}
